@@ -1,4 +1,4 @@
-# Scripts used to reconstruct & fit T2* maps from N-periodic SSFP data
+# Scripts used to reconstruct & fit $T_2^*$ maps from N-periodic SSFP data
 MATLAB scripts and .dat files used to generate T2* maps from raw data.
 This is accompanies the paper 'SSFP as an alternative to multi-echo gradient echo' authored by Lally PJ, Jin Y, Huo Z, Beitone C, Chiew M, Matthews PM, Miller KL and Bangerter NK.
 
