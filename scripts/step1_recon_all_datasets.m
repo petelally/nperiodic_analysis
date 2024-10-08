@@ -1,3 +1,11 @@
+%% STEP 1: Reconstructing individual echo images from raw data
+% Here we take the raw .dat files (provided separately - download these
+% and move them into the 'data' folder) and:
+% i) Do a sum-of-squares recon of the FLASH data across coils
+% ii) Do a POCS Partial Fourier recon of the individual SSFP echoes for
+% each coil
+% iii) Combine the per-echo data across coils via sum-of-squares
+
 
 clear all;
 
@@ -5,7 +13,7 @@ clear all;
 startdir=pwd;
 addpath(genpath("..\external"))
 cd('../data')
-%% Read in Multiecho data
+%% Read in Multiecho FLASH data
 %read in data    
 twix = mapVBVD(53);
 d_orig=twix.image(:,:,:,:);
@@ -27,17 +35,25 @@ save(strcat('img_sos_me_flash.mat'),"img_sos");
 
 cd(startdir)
 
-%% Loop through 4 datasets
+%% Loop through 4 SSFP datasets
 for cont_idx_=1:4
 
     clearvars -except startdir cont_idx_
     if cont_idx_==1
+        % file no 57, N=12, TR=6ms, grad spoiling = 20 lines, central
+        % config state = F5
         cont_list = [57]; N=12; TR=6; spl_lines=20; cfg=5;
     elseif cont_idx_==2
+        % file no 58, N=6, TR=6ms, grad spoiling = 40 lines, central
+        % config state = F2        
         cont_list = [58]; N=6; TR=6; spl_lines=40; cfg=2;
     elseif cont_idx_==3
+        % file no 59, N=5, TR=6ms, grad spoiling = 40 lines, central
+        % config state = F2        
         cont_list = [59]; N=5; TR=6; spl_lines=40; cfg=2;
     elseif cont_idx_==4
+        % file no 60, N=7, TR=6ms, grad spoiling = 34 lines, central
+        % config state = F3       
         cont_list = [60]; N=7; TR=6; spl_lines=34; cfg=3;
     end
         
@@ -52,6 +68,7 @@ for cont_idx_=1:4
     for echo=1:N
         d_pss_n(:,:,:,echo) = permute(d_orig(1:2:end,:,echo:N:end),[1 3 2]);
     end
+    % How many coils were used?
     ncoil=32;
 
     %% Compute each of the F-state signals (demodulate by phase term)
