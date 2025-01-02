@@ -9,6 +9,7 @@ Also check out the interactive tutorial on N-periodic sequences: https://github.
 
 
 ## Notes on running the scripts
+- These require MATLAB R2022a or later. To run with earlier MATLAB versions, please replace references to 'clim' to 'caxis' in scripts for steps 2 & 3.
 - First download the raw data from Zenodo and place the .dat files in the 'data' folder: https://doi.org/10.5281/zenodo.13900056 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13900056.svg)](https://doi.org/10.5281/zenodo.13900056)
 - Then run each script in 'scripts' in turn: 1) extract individual echoes from raw data, 2) run the least squares fit, 3) apply the ROIs and compare
