@@ -63,7 +63,8 @@ for data_idx=1:length(data_list)
 
         imagesc(rot90(mask./T2sfit,2)); % Display R2* map as it updates row-by-row in real time 
         axis image off
-        clim([0 0.15])
+        clim([0 0.15])  % Uncomment if using MATLAB R2022a or later
+        % caxis([0 0.15])  % Uncomment if using MATLAB versions prior to R2022a
         colormap parula
         drawnow
     
