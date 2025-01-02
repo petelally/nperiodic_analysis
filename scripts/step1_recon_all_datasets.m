@@ -33,8 +33,6 @@ end
 % Save .mat file
 save(strcat('img_sos_me_flash.mat'),"img_sos");
 
-cd(startdir)
-
 %% Loop through 4 SSFP datasets
 for cont_idx_=1:4
 
