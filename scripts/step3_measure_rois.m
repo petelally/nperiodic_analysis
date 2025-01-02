@@ -47,7 +47,9 @@ imagesc(img_sos(:,:,4));axis off image;colormap gray;
 title('T2*w image (FLASH)')
 figure(2)
 subplot(1,5,1)
-imagesc(1./T2sfit.*(T2sfit>0));axis off image;colormap parula;clim([0 0.15])
+imagesc(1./T2sfit.*(T2sfit>0));axis off image;colormap parula;
+clim([0 0.15]);  % Uncomment if using MATLAB R2022a or later
+% caxis([0 0.15]);  % Uncomment if using MATLAB versions prior to R2022a
 title('R2* map (FLASH)')
 
 %% Display and measure the fitted SSFP (N=5) data
@@ -61,7 +63,9 @@ imagesc(img_sos(:,:,4));axis off image;colormap gray;
 title('T2*w image (SSFP, N=5)')
 figure(2)
 subplot(1,5,2)
-imagesc(1./T2sfit.*(T2sfit>0));axis off image;colormap parula;clim([0 0.15])
+imagesc(1./T2sfit.*(T2sfit>0));axis off image;colormap parula;
+clim([0 0.15]);  % Uncomment if using MATLAB R2022a or later
+% caxis([0 0.15]);  % Uncomment if using MATLAB versions prior to R2022a
 title('R2* map (SSFP, N=5)')
 figure(3)
 clf
@@ -79,7 +83,9 @@ imagesc(img_sos(:,:,4));axis off image;colormap gray;
 title('T2*w image (SSFP, N=6)')
 figure(2)
 subplot(1,5,3)
-imagesc(1./T2sfit.*(T2sfit>0));axis off image;colormap parula;clim([0 0.15])
+imagesc(1./T2sfit.*(T2sfit>0));axis off image;colormap parula;
+clim([0 0.15]);  % Uncomment if using MATLAB R2022a or later
+% caxis([0 0.15]);  % Uncomment if using MATLAB versions prior to R2022a
 title('R2* map (SSFP, N=6)')
 figure(3)
 hold on
@@ -97,7 +103,9 @@ imagesc(img_sos(:,:,4));axis off image;colormap gray;
 title('T2*w image (SSFP, N=7)')
 figure(2)
 subplot(1,5,4)
-imagesc(1./T2sfit.*(T2sfit>0));axis off image;colormap parula;clim([0 0.15])
+imagesc(1./T2sfit.*(T2sfit>0));axis off image;colormap parula;
+clim([0 0.15]);  % Uncomment if using MATLAB R2022a or later
+% caxis([0 0.15]);  % Uncomment if using MATLAB versions prior to R2022a
 title('R2* map (SSFP, N=7)')
 figure(3)
 hold on
@@ -115,7 +123,10 @@ imagesc(img_sos(:,:,4));axis off image;colormap gray;set(gcf,'Color','w')
 title('T2*w image (SSFP, N=12)')
 figure(2)
 subplot(1,5,5)
-imagesc(1./T2sfit.*(T2sfit>0));axis off image;colormap parula;clim([0 0.15]);set(gcf,'Color','w')
+imagesc(1./T2sfit.*(T2sfit>0));axis off image;colormap parula;
+clim([0 0.15]);  % Uncomment if using MATLAB R2022a or later
+% caxis([0 0.15]);  % Uncomment if using MATLAB versions prior to R2022a
+set(gcf,'Color','w')
 title('R2* map (SSFP, N=12)')
 figure(3)
 hold on
