@@ -1,6 +1,6 @@
 # Scripts used to reconstruct & fit $T_2^*$ maps from N-periodic SSFP data
-MATLAB scripts and .dat files used to generate $T_2^*$ maps from raw data.
-This is accompanies the paper 'SSFP as an alternative to multi-echo gradient echo' authored by Lally PJ, Jin Y, Huo Z, Beitone C, Chiew M, Matthews PM, Miller KL and Bangerter NK.
+MATLAB scripts and .dat files used to generate $T_2^{\*}$ maps from raw data.
+This is accompanies the paper *'Steady-state free precession for T2\* relaxometry: All echoes in every readout with k-space aliasing'* (2025) Magn. Reson. Med. authored by Lally PJ, Jin Y, Huo Z, Beitone C, Chiew M, Matthews PM, Miller KL and Bangerter NK. (https://doi.org/10.1002/mrm.30590)
 
 Zenodo DOI for this release: [![DOI](https://zenodo.org/badge/869096073.svg)](https://doi.org/10.5281/zenodo.13902686)
 
