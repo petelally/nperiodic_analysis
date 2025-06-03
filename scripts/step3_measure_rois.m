@@ -69,7 +69,7 @@ clim([0 0.15]);  % Uncomment if using MATLAB R2022a or later
 title('R2* map (SSFP, N=5)')
 figure(3)
 clf
-errorbar(squeeze(R2s_gt_means),(squeeze(R2s_gt_means)-squeeze(R2s_n5_means))./squeeze(R2s_gt_means)*100,...
+errorbar(squeeze(R2s_gt_means),(-squeeze(R2s_gt_means)+squeeze(R2s_n5_means))./squeeze(R2s_gt_means)*100,...
     squeeze(R2s_n5_std)./squeeze(R2s_gt_means)*100,'or','MarkerFaceColor','r')
 
 %% Display and measure the fitted SSFP (N=6) data
@@ -89,7 +89,7 @@ clim([0 0.15]);  % Uncomment if using MATLAB R2022a or later
 title('R2* map (SSFP, N=6)')
 figure(3)
 hold on
-errorbar(squeeze(R2s_gt_means)+0.001,(squeeze(R2s_gt_means)-squeeze(R2s_n6_means))./squeeze(R2s_gt_means)*100,...
+errorbar(squeeze(R2s_gt_means)+0.001,(-squeeze(R2s_gt_means)+squeeze(R2s_n6_means))./squeeze(R2s_gt_means)*100,...
     squeeze(R2s_n6_std)./squeeze(R2s_gt_means)*100,'ob','MarkerFaceColor','b')
 
 %% Display and measure the fitted SSFP (N=7) data
@@ -109,7 +109,7 @@ clim([0 0.15]);  % Uncomment if using MATLAB R2022a or later
 title('R2* map (SSFP, N=7)')
 figure(3)
 hold on
-errorbar(squeeze(R2s_gt_means)+0.002,(squeeze(R2s_gt_means)-squeeze(R2s_n7_means))./squeeze(R2s_gt_means)*100,...
+errorbar(squeeze(R2s_gt_means)+0.002,(-squeeze(R2s_gt_means)+squeeze(R2s_n7_means))./squeeze(R2s_gt_means)*100,...
     squeeze(R2s_n7_std)./squeeze(R2s_gt_means)*100,'om','MarkerFaceColor','m')
 
 %% Display and measure the fitted SSFP (N=12) data
@@ -130,7 +130,7 @@ set(gcf,'Color','w')
 title('R2* map (SSFP, N=12)')
 figure(3)
 hold on
-errorbar(squeeze(R2s_gt_means)+0.003,(squeeze(R2s_gt_means)-squeeze(R2s_n12_means))./squeeze(R2s_gt_means)*100,...
+errorbar(squeeze(R2s_gt_means)+0.003,(-squeeze(R2s_gt_means)+squeeze(R2s_n12_means))./squeeze(R2s_gt_means)*100,...
     squeeze(R2s_n12_std)./squeeze(R2s_gt_means)*100,'ok','MarkerFaceColor','k')
 
 %% Annotate the display of the Bland-Altman plot
